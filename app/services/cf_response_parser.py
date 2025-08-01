@@ -27,6 +27,7 @@ class CFResponseParser:
         user.max_rank = user_info.get('maxRank', 'newbie')
         user.contributions = user_info.get('contribution', 0)
         user.registration_unix_time = user_info.get('registrationTimeSeconds', 0)
+        user.last_online_unix_time = user_info.get('lastOnlineTimeSeconds', 0)
 
     @classmethod
     def _parse_user_submission(cls, user_submission):
