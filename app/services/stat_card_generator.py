@@ -1,4 +1,5 @@
 import re
+import time
 
 from app.constant import Constant
 from app.models.user import User
@@ -40,4 +41,17 @@ class CardGenerator(IGenerator, FileHelper):
         output = re.sub('{{ accepted }}', str(user.accepted), output)
         output = re.sub('{{ wrong_answers }}', str(user.wrong_ans), output)
         output = re.sub('{{ contributions }}', str(user.contributions), output)
+        last_seen = int(time.time()) - user.last_online_unix_time
+        if last_seen < 60:
+            value = last_seen
+            output = re.sub('{{ last_seen }}', str(value) + ' second' + ('s' if value != 1 else ''), output)
+        elif last_seen < 60 * 60:
+            value = last_seen // 60
+            output = re.sub('{{ last_seen }}', str(value) + ' minute' + ('s' if value != 1 else ''), output)
+        elif last_seen < 60 * 60 * 24:
+            value = last_seen // (60 * 60)
+            output = re.sub('{{ last_seen }}', str(value) + ' hour' + ('s' if value != 1 else ''), output)
+        else:
+            value = last_seen // (60 * 60 * 24)
+            output = re.sub('{{ last_seen }}', str(value) + ' day' + ('s' if value != 1 else ''), output)
         return output
