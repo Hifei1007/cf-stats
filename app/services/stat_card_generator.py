@@ -54,4 +54,5 @@ class CardGenerator(IGenerator, FileHelper):
         else:
             value = last_seen // (60 * 60 * 24)
             output = re.sub('{{ last_seen }}', str(value) + ' day' + ('s' if value != 1 else ''), output)
+        re.sub('{{ generated_at }}', time.strftime("%m-%d %H:%M:%S", time.localtime()))
         return output
