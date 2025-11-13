@@ -132,7 +132,7 @@
                     <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
                   </svg>Max Rating
                 </td>
-                <td>2060</td>
+                <td>2048</td>
               </tr>
               <tr style="animation-delay: 450ms">
                 <td>
@@ -140,7 +140,7 @@
                     <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                   </svg>Contests
                 </td>
-                <td> 25</td>
+                <td> 23</td>
               </tr>
               <tr style="animation-delay: 600ms">
                 <td>
@@ -172,7 +172,7 @@
         </div>
       </foreignObject>
       <foreignObject x="21" y="231" width="318" height="10" class="generated" style="animation-delay: 1000ms">
-        Generated at 11-13 22:19:50. This project is a fork of sudiptob2/cf-stats.
+        Generated at 11-13 22:41:26. This project is a fork of sudiptob2/cf-stats.
       </foreignObject>
     </g>
   </g>
